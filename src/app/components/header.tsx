@@ -1,9 +1,17 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+<<<<<<< HEAD
 import { usePathname } from "next/navigation";
 
 export default function Header() {
+=======
+import { UserButton, SignInButton, useUser } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
+
+export default function Header() {
+  const { isSignedIn } = useUser();
+>>>>>>> 25eddb9835a93a7c141096adc6310fc9edbfa601
   const pathname = usePathname();
 
   return (
